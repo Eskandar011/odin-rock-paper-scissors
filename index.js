@@ -11,3 +11,17 @@ function getComputerChoice() {
       return "scissors";
   }
 }
+
+function playRound(playerSelection, computerSelection) {
+  if (
+    (playerSelection === "rock" && computerSelection === "scissors") ||
+    (playerSelection === "paper" && computerSelection === "rock") ||
+    (playerSelection === "scissors" && computerSelection === "paper")
+  ) {
+    return `You win!`;
+  } else if (playerSelection === computerSelection) {
+    return `It's a tie!`;
+  } else {
+    return `You lose!`;
+  }
+}
